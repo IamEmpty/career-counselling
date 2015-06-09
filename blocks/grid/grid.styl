@@ -1,0 +1,58 @@
+.container
+  margin 0 auto
+  padding 0 15px
+
+@media (min-width: 1240px)
+  .container
+    width 1170px
+    margin 0 auto
+
+.row
+  margin 0 -15px
+  &:after
+    content " "
+    clear both
+    display table
+
+// 16 column grid system
+for num in (1..12)
+  .col-xs-{num}
+    float left
+    width (100% / 12 * num)
+    padding 0 15px
+    box-sizing border-box
+    min-height 1px
+    position relative
+
+// 16 column grid system
+for num in (1..12)
+  @media (min-width 592px) // Width in landscape orientation of Nexus 5
+    .col-s-{num}
+      float left
+      width (100% / 12 * num)
+      padding 0 15px
+      box-sizing border-box
+      min-height 1px
+      position relative
+
+// 16 column grid system
+for num in (1..12)
+  @media (min-width 970px)
+    .col-m-{num}
+      float left
+      width (100% / 12 * num)
+      padding 0 15px
+      box-sizing border-box
+      min-height 1px
+      position relative
+
+// 16 column grid system
+for num in (1..12)
+  @media (min-width 1240px)
+    .col-l-{num}
+      float left
+      width (100% / 12 * num)
+      padding 0 15px
+      box-sizing border-box
+      min-height 1px
+      position relative
